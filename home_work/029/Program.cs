@@ -5,7 +5,7 @@ void FillArray(int[] collection)
 {
     for (int i = 0; i < collection.Length; i++)
     {
-        collection[i] = rnd.Next(0, 51);
+        collection[i] = rnd.Next(-50, 51);
     }
 }
 
@@ -20,10 +20,10 @@ void PrintArray(int[] collection)
 
 void Sort(int[] collection)
 {
-    for (int i = 0; i < collection.Length; i++)
+    for (int i = 0; i < Math.Abs(collection.Length); i++)
     {
         int MinPosition = i;
-        for (int j = i + 1; j < collection.Length; j++)
+        for (int j = i + 1; j < Math.Abs(collection.Length); j++)
         {
             if (collection[j] < collection[MinPosition])
             {
